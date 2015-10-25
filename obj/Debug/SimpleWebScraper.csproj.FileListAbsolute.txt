@@ -1,0 +1,14 @@
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\SimpleWebScraper.exe.config
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\SimpleWebScraper.exe
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\SimpleWebScraper.pdb
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\RazorHosting.dll
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\SimpleBrowser.dll
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\SimpleBrowser.WebDriver.dll
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\WebDriver.dll
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\bin\Debug\WebDriver.xml
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.Form1.resources
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.Properties.Resources.resources
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.csproj.GenerateResource.Cache
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.exe
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.pdb
+C:\Users\Avell G1511 MAX\Documents\Visual Studio 2015\Projects\SimpleWebScraper\SimpleWebScraper\obj\Debug\SimpleWebScraper.csprojResolveAssemblyReference.cache

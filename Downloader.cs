@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleWebScraper
@@ -14,18 +12,33 @@ namespace SimpleWebScraper
         {
             if (list.Count > 0)
             {
+
                 foreach (string link in list)
                 {
-                    WebClient wc = new WebClient();
                     string FileName = link.Remove(0, link.LastIndexOf("/"));
-                    wc.DownloadFileTaskAsync(link, pathToSave + FileName);
+                    WebClient wc = new WebClient();
+                    wc.DownloadFileTaskAsync(new System.Uri(link), pathToSave + FileName);
                 }
-                MessageBox.Show("Done :D");
+
+
+                DialogResult dialog = MessageBox.Show("Want to open folder with images?", "Done :D", MessageBoxButtons.YesNo);
+
+                if (dialog == DialogResult.Yes)
+                {
+                    Process.Start("explorer.exe", pathToSave);
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
                 MessageBox.Show("Found nothing _(._.)_");
             }
-        }  
+
+
+        }
+
     }
 }

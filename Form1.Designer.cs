@@ -36,7 +36,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.andréRodriguesMeloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Images = new System.Windows.Forms.CheckBox();
-            this.Sounds = new System.Windows.Forms.CheckBox();
+            this.Audios = new System.Windows.Forms.CheckBox();
             this.Videos = new System.Windows.Forms.CheckBox();
             this.Documents = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
@@ -67,12 +67,13 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(21, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Dest. Folder";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
@@ -88,6 +89,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -121,17 +123,19 @@
             this.Images.TabIndex = 5;
             this.Images.Text = "Images";
             this.Images.UseVisualStyleBackColor = true;
+            this.Images.CheckedChanged += new System.EventHandler(this.Images_CheckedChanged);
             // 
-            // Sounds
+            // Audios
             // 
-            this.Sounds.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Sounds.AutoSize = true;
-            this.Sounds.Location = new System.Drawing.Point(238, 105);
-            this.Sounds.Name = "Sounds";
-            this.Sounds.Size = new System.Drawing.Size(62, 17);
-            this.Sounds.TabIndex = 6;
-            this.Sounds.Text = "Sounds";
-            this.Sounds.UseVisualStyleBackColor = true;
+            this.Audios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Audios.AutoSize = true;
+            this.Audios.Location = new System.Drawing.Point(238, 105);
+            this.Audios.Name = "Audios";
+            this.Audios.Size = new System.Drawing.Size(58, 17);
+            this.Audios.TabIndex = 6;
+            this.Audios.Text = "Audios";
+            this.Audios.UseVisualStyleBackColor = true;
+            this.Audios.CheckedChanged += new System.EventHandler(this.Audios_CheckedChanged);
             // 
             // Videos
             // 
@@ -143,6 +147,7 @@
             this.Videos.TabIndex = 7;
             this.Videos.Text = "Videos";
             this.Videos.UseVisualStyleBackColor = true;
+            this.Videos.CheckedChanged += new System.EventHandler(this.Videos_CheckedChanged);
             // 
             // Documents
             // 
@@ -154,15 +159,17 @@
             this.Documents.TabIndex = 8;
             this.Documents.Text = "Documents";
             this.Documents.UseVisualStyleBackColor = true;
+            this.Documents.CheckedChanged += new System.EventHandler(this.Documents_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(602, 157);
             this.Controls.Add(this.Documents);
             this.Controls.Add(this.Videos);
-            this.Controls.Add(this.Sounds);
+            this.Controls.Add(this.Audios);
             this.Controls.Add(this.Images);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
@@ -192,7 +199,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem andréRodriguesMeloToolStripMenuItem;
         private System.Windows.Forms.CheckBox Images;
-        private System.Windows.Forms.CheckBox Sounds;
+        private System.Windows.Forms.CheckBox Audios;
         private System.Windows.Forms.CheckBox Videos;
         private System.Windows.Forms.CheckBox Documents;
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using SimpleBrowser.WebDriver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,15 +40,33 @@ namespace SimpleWebScraper
         private void button1_Click(object sender, EventArgs e)
         {
             WebScraper ws = new WebScraper();
+            IWebDriver browser = new SimpleBrowserDriver();
+            try
+            {
+                browser.Navigate().GoToUrl(textBox1.Text);
+            }
+            catch (System.UriFormatException)
+            {
 
+                MessageBox.Show("That is not a valid URL!");
+                return;
+            }
             if (Directory.Exists(textBox2.Text))
             {
-                ws.Seek(textBox1.Text, textBox2.Text);
+                if (Images.Checked || Audios.Checked || Videos.Checked || Documents.Checked)
+                {
+                    ws.Seek(textBox1.Text, textBox2.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please choose at least one filter option!");
+                }
             }
             else
             {
                 MessageBox.Show("invalid path !");
-            }
+            } 
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,7 +74,7 @@ namespace SimpleWebScraper
             FolderBrowserDialog folderbrowserdialog = new FolderBrowserDialog();
             folderbrowserdialog.Description = "Please select a folder to save the files";
             folderbrowserdialog.ShowDialog();
-            textBox2.Text = folderbrowserdialog.SelectedPath;
+            textBox2.Text = folderbrowserdialog.SelectedPath + "\\";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -67,7 +87,25 @@ namespace SimpleWebScraper
 
         }
 
-       
+        private void Images_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Images.Checked) { WebScraper.images = true; }
+        }
+
+        private void Videos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Videos.Checked) { WebScraper.videos = true; }
+        }
+
+        private void Audios_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Audios.Checked) { WebScraper.audios = true; }
+        }
+
+        private void Documents_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Documents.Checked) { WebScraper.documents = true; }
+        }
     }
 
   
